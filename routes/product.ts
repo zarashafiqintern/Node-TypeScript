@@ -50,4 +50,23 @@ router.get('/products', (req: Request, res: Response) => {
   res.status(200).json(products);
 });
 
+router.delete('/products/:userId', (req: Request, res: Response) => {
+  const userId = req.params.userId;
+
+  const remainingProducts = products.filter(p => p.userId !== userId);
+
+  if (remainingProducts.length === products.length) {
+    return res.status(404).send({ message: "No products found for this user" });
+  }
+
+  products = remainingProducts;
+
+  fs.writeFile('./product.json', JSON.stringify(products), (err) => {
+    if (err) {
+      return res.status(500).send({ message: "Error deleting products" });
+    }
+    res.status(200).send({ message: `deleted successfully` });
+  });
+});
+
 export default router;
