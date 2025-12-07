@@ -6,12 +6,6 @@
     "password": "$2b$10$ZSkOMWn2jvmpkGGtRuAEE.JdgXQmPr8ZomNXfMKZUNbnZ4.DNOfNy"
   },
   {
-    "id": "4c8bf24d-4d3e-432e-9b2d-a57110a42a09",
-    "name": "zara",
-    "email": "zara@gmail.com",
-    "password": "$2b$10$.8XPH0GWoG63j.e4tI6sw.H4OAd.frGj5JfWo3jDhn.Um.4rW7Tx2"
-  },
-  {
     "id": "f0aacde2-785b-4306-9a05-1113016a52a3",
     "name": "ary",
     "email": "ary@gmail.com",
@@ -30,12 +24,6 @@
     "password": "$2b$10$LAfPwzhgrS3H0b79yFQb.utmlVMCBiQ2T0qldLibHnaNOMvvnVP6W"
   },
   {
-    "id": "263fd128-b428-4a69-945e-ab9d6146b323",
-    "name": "ayes",
-    "email": "ayesha@gmail.com",
-    "password": "01345678"
-  },
-  {
     "id": "89363b96-226a-4880-add6-915386cffd33",
     "name": "ora",
     "email": "ora@gmail.com",
@@ -46,5 +34,11 @@
     "name": "khadija",
     "email": "khadija@gmail.com",
     "password": "$2b$10$lJ/AQsdrOSs1tw1mctTF.uhOhq5lAuiig7bj90QzHNZnfSVXbAJpe"
+  },
+  {
+    "id": "d62b8a49-e431-40a6-a2a3-302bcf8340d0",
+    "name": "khad",
+    "email": "khad@gmail.com",
+    "password": "$2b$10$rDtwvuo/w1nBmZNBC85IQOVfp94VdACI.j9akFFLgNix6YtGA6aO."
   }
 ]
