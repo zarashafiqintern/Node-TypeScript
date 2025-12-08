@@ -69,4 +69,28 @@ router.delete('/products/:userId', (req: Request, res: Response) => {
   });
 });
 
+router.put('/products/:userId', (req: Request, res: Response) => {
+  const userId = req.params.userId;
+  const { name } = req.body;
+
+  if (!name) {
+    return res.status(400).send({ message: "Product name is required for update" });
+  }
+
+  const productIndex = products.findIndex(p => p.userId === userId);
+
+  if (productIndex === -1) {
+    return res.status(404).send({ message: "No product found for this user" });
+  }
+
+  products[productIndex]!.name = name;
+
+  fs.writeFile('./product.json', JSON.stringify(products), (err) => {
+    if (err) {
+      return res.status(500).send({ message: "Error updating product" });
+    }
+    res.status(200).send({ message: "Product updated successfully", product: products[productIndex] });
+  });
+});
+
 export default router;
